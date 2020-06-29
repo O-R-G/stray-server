@@ -47,8 +47,8 @@ move with many subjects lost & found.
 `;
 var slides = 475;
 
-var letter_duration = 1000;
-var slide_text_duration = 3000;
+var letter_duration = 3000;
+var slide_text_duration = 1000;
 var slide_image_duration = 10000;
 
 var letter_length = poem.length;
