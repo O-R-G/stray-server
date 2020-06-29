@@ -72,9 +72,9 @@ app.listen(3002, () => {
 
 app.get("/now", (req, res, next) => {
   var now = new Date().getTime();
-  var current_letter = Math.round( (now/letter_duration ) % length);
-  var current_slide_text = Math.round( (now/slide_text_duration ) % slides);
-  var current_slide_image = Math.round( (now/slide_image_duration ) % slides);
+  var current_letter = Math.round( (now/letter_duration ) % letter_length);
+  var current_slide_text = Math.round( (now/slide_text_duration ) % slide_text_length);
+  var current_slide_image = Math.round( (now/slide_image_duration ) % slide_image_length);
   now = now / 1000;    // seconds since 1970 unix time
   res.json({ 
   	now: now, 
