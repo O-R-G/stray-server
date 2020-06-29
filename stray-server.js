@@ -45,8 +45,16 @@ through the viewfinder
 stray subjects moving through the finder 
 move with many subjects lost & found.
 `;
-var length = poem.length;
 var slides = 475;
+
+var letter_duration = 1000;
+var slide_text_duration = 3000;
+var slide_image_duration = 10000;
+
+var letter_length = poem.length;
+var slide_text_length = 707;
+var slide_image_length = 138;
+
 
 // listen and respond
 // (only GET)
@@ -63,8 +71,22 @@ app.listen(3000, () => {
 });
 
 app.get("/now", (req, res, next) => {
-  var now = new Date().getTime() / 1000;    // seconds since 1970 unix time
-  var current_letter = Math.round(now % length);
-  var current_slide = Math.round(now % slides);
-  res.json({ now: now, poem: poem, length: length, current_letter: current_letter, slides: slides, current_slide: current_slide });
+  var now = new Date().getTime();
+  var current_letter = Math.round( (now/letter_duration ) % length);
+  var current_slide_text = Math.round( (now/slide_text_duration ) % slides);
+  var current_slide_image = Math.round( (now/slide_image_duration ) % slides);
+  now = now / 1000;    // seconds since 1970 unix time
+  res.json({ 
+  	now: now, 
+  	poem: poem, 
+  	letter_length: letter_length, 
+  	letter_duration: letter_duration,
+  	current_letter: current_letter,
+  	slide_text_length: slide_text_length, 
+  	slide_text_duration: slide_text_duration,
+  	current_slide_text: current_slide_text,
+  	slide_image_length: slide_image_length, 
+  	slide_image_duration: slide_image_duration,
+  	current_slide_image: current_slide_image
+  });
 });
