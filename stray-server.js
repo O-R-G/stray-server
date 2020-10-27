@@ -103,7 +103,7 @@ app.get("/now", (req, res, next) => {
     chapter_2: {
       length: chapter_2_length,
       current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_2_length);
-    },
+    }
 
   });
 });
