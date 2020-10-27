@@ -98,11 +98,11 @@ app.get("/now", (req, res, next) => {
   	current_slide_image: current_slide_image,
     chapter_1: {
       length: chapter_1_length,
-      current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_1_length);
+      current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_1_length)
     },
     chapter_2: {
       length: chapter_2_length,
-      current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_2_length);
+      current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_2_length)
     }
 
   });
