@@ -83,7 +83,7 @@ app.get("/now", (req, res, next) => {
   var current_slide_text = parseInt(Math.round( (now/slide_text_duration )) % slide_text_length);
   var current_slide_image = parseInt(Math.round( (now/slide_image_duration )) % slide_image_length);
 
-  now = now / 1000;    // seconds since 1970 unix time
+  // now = now / 1000;    // seconds since 1970 unix time
   res.json({ 
   	now: now, 
   	poem: poem, 
