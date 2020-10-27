@@ -56,6 +56,13 @@ var slide_text_length = 707;
 var slide_image_length = 138;
 
 
+var chapter_1_length = 588;
+var chapter_2_length = 40;
+var chapter_3_length = 309;
+var chapter_6_length = 404;
+var chapter_8_length = 100;
+
+
 // listen and respond
 // (only GET)
 
@@ -88,6 +95,15 @@ app.get("/now", (req, res, next) => {
   	current_slide_text: current_slide_text,
   	slide_image_length: slide_image_length, 
   	slide_image_duration: slide_image_duration,
-  	current_slide_image: current_slide_image
+  	current_slide_image: current_slide_image,
+    chapter_1: {
+      length: chapter_1_length,
+      current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_1_length);
+    },
+    chapter_2: {
+      length: chapter_2_length,
+      current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_2_length);
+    },
+
   });
 });
