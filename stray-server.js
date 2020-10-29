@@ -59,12 +59,12 @@ var slide_image_length = 138;
 var chapter_1_length = 588;
 var chapter_2_length = 40;
 var chapter_3_length = 309;
-var chapter_4_length = 1;
-var chapter_5_length = 1;
+var chapter_4_length = 0;
+var chapter_5_length = 0;
 var chapter_6_length = 404;
-var chapter_7_length = 1;
+var chapter_7_length = 0;
 var chapter_8_length = 100;
-
+var entire_length = chapter_1_length + chapter_2_length + chapter_3_length + chapter_4_length + chapter_5_length + chapter_6_length + chapter_7_length + chapter_8_length;
 
 // listen and respond
 // (only GET)
@@ -99,11 +99,11 @@ app.get("/now", (req, res, next) => {
   }
   var chapter_4 = {
     length: chapter_4_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_4_length)
+    current_slide: 0
   }
   var chapter_5 = {
     length: chapter_5_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_5_length)
+    current_slide: 0
   }
   var chapter_6 = {
     length: chapter_6_length,
@@ -111,11 +111,15 @@ app.get("/now", (req, res, next) => {
   }
   var chapter_7 = {
     length: chapter_7_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_7_length)
+    current_slide: 0
   }
   var chapter_8 = {
     length: chapter_8_length,
     current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_8_length)
+  }
+  var entire = {
+    length: entire_length,
+    current_slide: parseInt(Math.round( (now/slide_text_duration )) % entire_length)
   }
 
   now = now / 1000;    // seconds since 1970 unix time
@@ -138,7 +142,8 @@ app.get("/now", (req, res, next) => {
     chapter_5: chapter_5,
     chapter_6: chapter_6,
     chapter_7: chapter_7,
-    chapter_8: chapter_8
+    chapter_8: chapter_8,
+    entire: entire
 
   });
 });
