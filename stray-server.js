@@ -5,11 +5,22 @@
 
 var express = require("express");
 var cors = require('cors');
+var fs = require('fs');
 var app = express();
-
 app.use(cors());
+console.log('hi');
+var poem = '';
+fs.readFile('text.txt', 'utf8', (err, data)=>{
+  if(err){
+    console.log(err);
+    return false;
+  }
+  poem = data;
+  // console.log(data);
+});
 
-var poem = `STRAY ERR STRAY (STRĀ) INTR.V. STRAYED, STRAY•ING, STRAYS 1A. TO MOVE AWAY FROM A GROUP, DEVIATE FROM THE CORRECT COURSE, OR GO BEYOND ESTABLISHED LIMITS. B. TO BECOME LOST. 2. TO WANDER ABOUT WITHOUT A DESTINATION OR PURPOSE; ROAM. SEE SYNONYMS AT WANDER. 3. TO FOLLOW A WINDING COURSE; MEANDER. 4. TO DEVIATE FROM A MORAL, PROPER, OR RIGHT COURSE; ERR. 5. TO BECOME DIVERTED FROM A SUBJECT OR TRAIN OF THOUGHT; DIGRESS: STRAYED FROM THE TOPIC. SEE SYNONYMS AT SWERVE. ◊ N. ONE THAT HAS STRAYED, ESPECIALLY A DOMESTIC ANIMAL WANDERING ABOUT. ◊ ADJ. 1. STRAYING OR HAVING STRAYED; WANDERING OR LOST: STRAY CATS AND DOGS. 2. SCATTERED OR SEPARATE: A FEW STRAY CRUMBS. [MIDDLE ENGLISH STRAIEN, FROM OLD FRENCH ESTRAIER, FROM ESTREE, HIGHWAY, FROM LATIN STRĀTA. SEE STREET.] — STRAY’ER ENTER THE PHOTORAMA ΦΩΤΟΣ (PHŌTOS) GENITIVE OF ΦΩ͂ (PHŌS) LIGHT ΓΡΑΦΗ (GRAPHÉ) REPRESENTATION BY MEANS OF LINES" OR "DRAWING", TOGETHER MEANING DRAWING WITH LIGHT. MODIFICATION OF - ORAMA FROM ANCIENT GREEK ὍΡᾹΜᾸ, (HÓRĀMA, “SIGHT, SPECTACLE”) TEMPLE HI LO STRAY INDEFINITE TIME INDETERMINATE TIME DISPLACED TIME ABSTRACT TIME BILATERAL TIME TRANSMISSION TIME TRANSDUCED TIME SINGULARITIES ARTICULATION OF SOUND FORMS IN TIME WHEN YOU WRITE A POEM YOU USE SOUNDS AND WORDS OUTSIDE TIME. YOU USE TIMELESS ARTICULATIONS. SPLAY ANTHEM SONG OF THE ANDOUMBOULOU 50 ERODING WITNESS SOUND AND SENTIMENT, SOUND AND SYMBOL POETIC LANGUAGE IS LANGUAGE OWNING UP TO BEING AN ORPHAN, TO ITS TENUOUS KINSHIP WITH THE THINGS IT OSTENSIBLY REFERS TO. THE POLITICS OF POETIC FORM: POETRY AND PUBLIC POLICY FRIENDS IN DEED FRIENDS IN DEED FRIENDS IN DEED GRACE WALKING AND TALKING BOMBARDO MY EMILY DICKINSON MAGNALIA CHRISTI AMERICANA BREATHING, BOMBS, SWORDS, DEATH, SPEARS AND FLAMES WILL AND BE GOING TO WILL BE GOING TO SIGNAL ESCAPES SINGULARITIES TREE ELLIPSES OR THE HOT WAR COUPLE THE SEVEN SLEEPERS SEPTET FOR THE END OF TIME SEPTET FOR THE END OF TIME SEPTET FOR THE END OF TIME SPLAY ANTHEM SPLAY ANTHEM BYG  A SIDE / B SIDE EARLY SHAKER SPIRITUALS, A RECORD ALBUM INTERPRETATION THE B SIDE: NEGRO FOLKLORE FROM TEXAS STATE PRISONS THE B SIDE TWO PLAYS ABOUT AMERICAN FOLKLORE DRAWN OUT OVER TIME AND SPACE ONE BLACK AND ONE WHITE DISCREPANTLY ENGAGING AS NATHANIEL MACKEY WOULD CALL IT BOTH RECORD ALBUM INTERPRETATIONS BOTH REAL AND IMAGINED WALK THROUGH ONE DOOR INTO A CIRCLE IN A SQUARE INTO THE EARLY SHAKER SPIRITUALS A RITUAL COMMUNITY OF CAST OUTS FROM THE CHURCH OF ENGLAND FOR PRACTICING THEIR RADICAL BELIEFS SCORNED AND THREATENED THEY RESETTLED IN THE NEW AMERICAN WILDERNESS OF THE 18TH CENTURY SEEKING RELIGIOUS FREEDOM IN ECSTATIC SONG AND DANCE TO UNSETTLE AND UNRESTRELIGEOUS FORM. WALK THROUGH ANOTHER DOOR INTO ANOTHER CIRCLE INSIDE ANOTHER SQUARE IN THE BLACK BOX THEATER AND ENTER THE B SIDE: NEGRO FOLKLORE FROM TEXAS STATE PRISONS. ENTER A YOUNG ACTOR ALONE IN HIS BEDROOM TRANSCRIBING, RESEARCHING AND INTERPRETING WORK-SONGS, SPIRITUALS, BLUES AND TOASTS. CONVICT LYRICS AN AMERICAN ORAL TRADITION OF HARD LABOR ROOTED IN THE EARLY DAYS OF SLAVERY. THE SENSATIONS THE TRANSDUCTIONS TRANSDUCTION AS IT RELATES TO THE PHYSIOLOGICAL FOLLOWS THESE PRINCIPAL STEPS OF SENSORY PROCESSING: SIGNAL (SUN OR LP) + COLLECTION (EYE OR CAMERA OR EAR) + TRANSDUCTION (NERVOUS SYSTEM) + PROCESSING (LISTENING) + ACTION (SONG). SPLAY ANTHEM AMERICAN PHOTO - GRAPHS AIDS SOIL EROS - ION SOIL EROSION FSA FSA AMERICAN PHOTOGRAPHS ION ACTION CONDITION COMMUNION UNION SOIL EROSION KNOCKING AROUND BETWEEN MONEY, SEX, AND BOREDOM: WALKER EVANS IN HAVANA AND NEW YORK NOT LEAST SINCE THE YALE LECTURE ATTRACTED ITS SHARE OF OUTRAGE AND HATE MAIL. PERHAPS IT WAS TOO PROVOCATIVE FOR FORMER STUDENTS AND COLLEAGUES, RIGHT THERE WHERE HE HAD TAUGHT. YET, IT IS IN FACT THE HAGIOGRAPHIC VIEW OF EVANS THAT DIMINISHES HIM, RATHER THAN THE ATTEMPT TO PURSUE WHAT HAS BEEN EXCLUDED FROM THE APPROVED ENGAGEMENT WITH HIS PHOTOGRAPHS. HE IS SIMPLY NOT THE MONOLITHIC MORAL PARAGON OTHERS INVENTED––AND THAT, FOR ME, MAKES HIS WORK STRANGER AND MORE COMPELLING. THE ORIGINAL CALL FOR SOIL EROSION SOUGHT TO MANEUVER AROUND ITS TITLE. IT SPOKE OF STATES EROSIONS, CLIMATE EROSIONS, CULTURAL EROSIONS AND SOCIAL EROSIONS. SOIL AS LAND, BODY AND SOILING. EROSION AS EROS, LOSS AND DESIRE AND ALSO THE POTENTIAL FOR NEW CLEARINGS. IN THE DAYS, WEEKS AND NOW YEARS FOLLOWING THE 2016 PRESIDENTIAL ELECTION, THIS PHRASEOLOGY HAS ENTERED SHIFTING LANDSCAPES THAT WITH EACH PASSING DAY GROW MORE AND MORE UNIMAGINABLE, WHERE ANY IDEA OF GROUND OR GROUNDING IS UNCLEAR AT BEST. TAKEN TOGETHER, THE WORK IN SOIL EROSION IS A COLLECTION OF THESE STARTING POINTS PLACED IN A LARGER NARRATIVE FIELD WHERE MEANING PLUS THE CULTURAL AND POLITICAL CIRCUMSTANCES OF OUR LIVING CONDITIONS GO TO WORK ON EACH OTHER TO CAST DOUBT AND SHORE UP NEW CERTAINTIES. A GRAPHIC TONE SPLAY ANTHEM, NEW DIRECTIONS WET WORDS IN A HOT FIELD WATER IN THE CAMERA IS A SIGN OF WHAT CAN HAPPEN WHEN WET WORDS ENTER A HOT FIELD. SUBJECTS WITHOUT CAMERAS IN A PLACE WITHOUT CAMERAS. SOME PEOPLE WILL SAY THAT THIS CAMERA IS A PRECISION INSTRUMENT BUT I SAY THAT THIS CAMERA IS AN INSTRUMENT FOR GOING STRAY. A CAMERA THAT IS STRAYING ON AN OBJECT OTHER THAN A HUMAN FACE MAY BE DETECTED AS A HUMAN FACE. VIRTUAL HORIZONS IN EXPOSURE ZONES, NIGHT SCENES OR POINTS OF LIGHT, SUBJECTS IN LOW LIGHT, SUBJECTS AT THE EDGE OF THE PICTURE, SUBJECTS STRONGLY REFLECTING LIGHT, SUBJECTS MOVING DRAMATICALLY UP, DOWN, LEFT AND RIGHT, SUBJECTS THAT CHANGE SPEED AND MOVE ERRATICALLY, SUBJECTS APPROACHING OR MOVING AWAY FROM THE CAMERA, SUBJECTS AT THE EDGE OF THE PICTURE, SUBJECTS IN AN AUDIBLE FIELD, SUBJECTS GOING STRAY. TOUCH THE SUBJECT TO FOCUS. GOING STRAY LIKE HAIRS ON THE NECK. PICTURE STRAY HAIRS CROSSING A SUBJECTS EYE AND THEN ERASING STRAY SUBJECTS FROM THE FRAME. HOW STRAY LIGHT REACHING THE IMAGE PLANE ENTERS THE CAMERA DURING EXPOSURE AND EVEN IF THE SUN IS SLIGHTLY AWAY FROM THE ANGLE OF VIEW IT MAY STILL CAUSE SMOKE OR FIRE. DRAGGING ON THE MONITOR WHILE LOOKING THROUGH THE VIEWFINDER STRAY SUBJECTS MOVING THROUGH THE FINDER MOVE WITH MANY SUBJECTS LOST & FOUND.`;
+
+
 var slides = 475;
 
 var letter_duration = 3000;
@@ -17,19 +28,19 @@ var slide_text_duration = 1000;
 var slide_image_duration = 10000;
 
 var letter_length = poem.length;
-var slide_text_length = 707;
-var slide_image_length = 138;
+// var slide_text_length = 707;
+// var slide_image_length = 138;
 
 
-var chapter_1_length = 588;
-var chapter_2_length = 40;
-var chapter_3_length = 309;
-var chapter_4_length = 0;
-var chapter_5_length = 0;
-var chapter_6_length = 404;
-var chapter_7_length = 0;
-var chapter_8_length = 100;
-var entire_length = chapter_1_length + chapter_2_length + chapter_3_length + chapter_4_length + chapter_5_length + chapter_6_length + chapter_7_length + chapter_8_length;
+// var chapter_1_length = 588;
+// var chapter_2_length = 40;
+// var chapter_3_length = 309;
+// var chapter_4_length = 0;
+// var chapter_5_length = 0;
+// var chapter_6_length = 404;
+// var chapter_7_length = 0;
+// var chapter_8_length = 100;
+// var entire_length = chapter_1_length + chapter_2_length + chapter_3_length + chapter_4_length + chapter_5_length + chapter_6_length + chapter_7_length + chapter_8_length;
 
 // listen and respond
 // (only GET)
@@ -42,75 +53,80 @@ app.use(cors({
 */
 
 app.listen(3002, () => {
- console.log("Server running on port 3000");
+ console.log("Server running on port 3002");
 });
 
 app.get("/now", (req, res, next) => {
   var now = new Date().getTime();
-  var current_letter = Math.round( (now/letter_duration ) % letter_length);
+  // var current_letter = Math.round( (now/letter_duration ) % letter_length);
   var current_pos = parseInt(now/1000) % letter_length;
-  var current_slide_text = parseInt(Math.round( (now/slide_text_duration )) % slide_text_length);
-  var current_slide_image = parseInt(Math.round( (now/slide_image_duration )) % slide_image_length);
-  var chapter_1 = {
-    length: chapter_1_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_1_length)
-  };
-  var chapter_2 = {
-    length: chapter_2_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_2_length)
-  }
-  var chapter_3 = {
-    length: chapter_3_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_3_length)
-  }
-  var chapter_4 = {
-    length: chapter_4_length,
-    current_slide: 0
-  }
-  var chapter_5 = {
-    length: chapter_5_length,
-    current_slide: 0
-  }
-  var chapter_6 = {
-    length: chapter_6_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_6_length)
-  }
-  var chapter_7 = {
-    length: chapter_7_length,
-    current_slide: 0
-  }
-  var chapter_8 = {
-    length: chapter_8_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_8_length)
-  }
-  var entire = {
-    length: entire_length,
-    current_slide: parseInt(Math.round( (now/slide_text_duration )) % entire_length)
-  }
+  // var current_slide_text = parseInt(Math.round( (now/slide_text_duration )) % slide_text_length);
+  // var current_slide_image = parseInt(Math.round( (now/slide_image_duration )) % slide_image_length);
+  // var chapter_1 = {
+  //   length: chapter_1_length,
+  //   current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_1_length)
+  // };
+  // var chapter_2 = {
+  //   length: chapter_2_length,
+  //   current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_2_length)
+  // }
+  // var chapter_3 = {
+  //   length: chapter_3_length,
+  //   current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_3_length)
+  // }
+  // var chapter_4 = {
+  //   length: chapter_4_length,
+  //   current_slide: 0
+  // }
+  // var chapter_5 = {
+  //   length: chapter_5_length,
+  //   current_slide: 0
+  // }
+  // var chapter_6 = {
+  //   length: chapter_6_length,
+  //   current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_6_length)
+  // }
+  // var chapter_7 = {
+  //   length: chapter_7_length,
+  //   current_slide: 0
+  // }
+  // var chapter_8 = {
+  //   length: chapter_8_length,
+  //   current_slide: parseInt(Math.round( (now/slide_text_duration )) % chapter_8_length)
+  // }
+  // var entire = {
+  //   length: entire_length,
+  //   current_slide: parseInt(Math.round( (now/slide_text_duration )) % entire_length)
+  // }
 
   now = now / 1000;    // seconds since 1970 unix time
-  res.json({ 
-  	now: now, 
-  	poem: poem, 
-  	letter_length: letter_length, 
-  	letter_duration: letter_duration,
-  	current_letter: current_letter,
-    current_pos: current_pos,
-  	slide_text_length: slide_text_length, 
-  	slide_text_duration: slide_text_duration,
-  	current_slide_text: current_slide_text,
-  	slide_image_length: slide_image_length, 
-  	slide_image_duration: slide_image_duration,
-  	current_slide_image: current_slide_image,
-    chapter_1: chapter_1,
-    chapter_2: chapter_2,
-    chapter_3: chapter_3,
-    chapter_4: chapter_4,
-    chapter_5: chapter_5,
-    chapter_6: chapter_6,
-    chapter_7: chapter_7,
-    chapter_8: chapter_8,
-    entire: entire
+  console.log(now);
+  // res.json({ 
+  // 	now: now, 
+  // 	poem: poem, 
+  // 	letter_length: letter_length, 
+  // 	letter_duration: letter_duration,
+  // 	current_letter: current_letter,
+  //   current_pos: current_pos,
+  // 	slide_text_length: slide_text_length, 
+  // 	slide_text_duration: slide_text_duration,
+  // 	current_slide_text: current_slide_text,
+  // 	slide_image_length: slide_image_length, 
+  // 	slide_image_duration: slide_image_duration,
+  // 	current_slide_image: current_slide_image,
+  //   chapter_1: chapter_1,
+  //   chapter_2: chapter_2,
+  //   chapter_3: chapter_3,
+  //   chapter_4: chapter_4,
+  //   chapter_5: chapter_5,
+  //   chapter_6: chapter_6,
+  //   chapter_7: chapter_7,
+  //   chapter_8: chapter_8,
+  //   entire: entire
 
+  // });
+  res.json({ 
+    now: now, 
+    current_pos: current_pos
   });
 });
