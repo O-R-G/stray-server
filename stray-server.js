@@ -8,9 +8,8 @@ var cors = require('cors');
 var fs = require('fs');
 var app = express();
 app.use(cors());
-console.log('hi');
 var poem = '';
-fs.readFile('text.txt', 'utf8', (err, data)=>{
+fs.readFile('data/text.txt', 'utf8', (err, data)=>{
   if(err){
     console.log(err);
     return false;
