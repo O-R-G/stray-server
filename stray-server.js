@@ -8,14 +8,28 @@ var cors = require('cors');
 var fs = require('fs');
 var app = express();
 app.use(cors());
-var poem = '';
+var text_plain = '';
+var text_plain_extended = '';
+var text_plain_length;
+var text_plain_extended_length;
 fs.readFile('data/text.txt', 'utf8', (err, data)=>{
   if(err){
     console.log(err);
     return false;
   }
-  poem = data;
+  text_plain = data;
   // console.log(data);
+  text_plain_length = text_plain.length;
+});
+
+fs.readFile('data/text_extended.txt', 'utf8', (err, data)=>{
+  if(err){
+    console.log(err);
+    return false;
+  }
+  text_plain_extended = data;
+  // console.log(data);
+  text_plain_extended_length = text_plain_extended.length;
 });
 
 
@@ -26,7 +40,7 @@ var letter_duration = 3000;
 var slide_text_duration = 1000;
 var slide_image_duration = 10000;
 
-var letter_length = poem.length;
+
 // var slide_text_length = 707;
 // var slide_image_length = 138;
 
@@ -58,7 +72,8 @@ app.listen(3002, () => {
 app.get("/now", (req, res, next) => {
   var now = new Date().getTime();
   // var current_letter = Math.round( (now/letter_duration ) % letter_length);
-  var current_pos = parseInt(now/1000) % letter_length;
+  var current_pos = parseInt(now/1000) % text_plain_length;
+  var current_pos_extended = parseInt(now/1000) % text_plain_extended_length;
   // var current_slide_text = parseInt(Math.round( (now/slide_text_duration )) % slide_text_length);
   // var current_slide_image = parseInt(Math.round( (now/slide_image_duration )) % slide_image_length);
   // var chapter_1 = {
@@ -102,7 +117,7 @@ app.get("/now", (req, res, next) => {
   console.log(now);
   // res.json({ 
   // 	now: now, 
-  // 	poem: poem, 
+  // 	text_plain: text_plain, 
   // 	letter_length: letter_length, 
   // 	letter_duration: letter_duration,
   // 	current_letter: current_letter,
@@ -126,6 +141,7 @@ app.get("/now", (req, res, next) => {
   // });
   res.json({ 
     now: now, 
-    current_pos: current_pos
+    current_pos: current_pos,
+    current_pos_extended: current_pos_extended
   });
 });
